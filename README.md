@@ -1,10 +1,8 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:6EE7F9,100:6366F1&height=200&section=header&text=Hi%20There,%20I'm%20Erlyn%20%F0%9F%91%8B&fontSize=40&fontColor=ffffff&animation=fadeIn&fontAlignY=35&desc=IT%20Student%20%7C%20Full-Stack%20%26%20Mobile%20Developer%20in%20Progress&descAlignY=55&descSize=18" width="100%"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:6EE7F9,100:6366F1&height=190&section=header&text=Full-Stack%20%26%20Mobile%20Developer&fontSize=34&fontColor=ffffff&animation=fadeIn&fontAlignY=35&desc=IT%20Student%20%7C%20Building%20Real%20Products%20End-to-End&descAlignY=55&descSize=16" width="100%"/>
 
-<a href="https://github.com/Devlynxz">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=20&pause=1000&color=6366F1&center=true&vCenter=true&width=600&lines=IT+Student+%40+Taguig+City%2C+PH;Building+with+React+%2B+FastAPI+%2B+Flutter;Turning+Ideas+Into+Working+Code+%F0%9F%9A%80" alt="Typing SVG" />
-</a>
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=20&pause=1000&color=6366F1&center=true&vCenter=true&width=600&lines=React+%2B+FastAPI+%2B+Flutter;Shipping+Full+Products%2C+Not+Just+Tutorials;Turning+Ideas+Into+Working+Code+%F0%9F%9A%80" alt="Typing SVG" />
 
 </div>
 
@@ -12,59 +10,39 @@
 
 ## 👋 About Me
 
-I'm **Erlyn Quimson**, an IT student based in Taguig City, Philippines, passionate about building software that solves real problems. I like working across the stack — from React frontends to FastAPI backends to Flutter mobile apps — and I learn best by shipping actual projects instead of just tutorials.
-
-```txt
-const erlyn = {
-    role: "IT Student",
-    location: "Taguig City, Philippines",
-    focus: ["Full-Stack Web Development", "Mobile App Development"],
-    currentlyLearning: "Python & FastAPI, in depth",
-    goal: "Build software that solves real-world problems and helps people",
-};
-```
+IT student and full-stack developer who enjoys taking a product from idea to something people can actually use — React and Tailwind on the frontend, FastAPI and PostgreSQL on the backend, Flutter for mobile. I learn best by shipping real projects rather than tutorials, and I'm currently deepening my backend and mobile skills.
 
 - 🔭 Currently building **[CodeCrew Blog](https://github.com/Devlynxz/codecrew-blog)** and **[MateSpace](https://github.com/Devlynxz/matespaceprod-app)**
-- 🌱 Currently deepening my **Python / FastAPI** and **Flutter** skills
-- 🎯 Goal: develop software that improves people's lives using the skills I build as an IT student
-- 📫 Reach me at **erlynquimson93@gmail.com**
+- 🤝 Collaborated with the **Codecrew Seekers** team on a full-stack blogging platform
+- 🎯 Goal: build software that solves real-world problems
 
 <br>
 
 ## 🛠️ Tech Stack
 
-**Frontend**
+<div align="center">
 
-<img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" />
-<img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" />
-<img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" />
-<img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" />
-<img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" />
+**Frontend**
+<br>
+<img src="https://skillicons.dev/icons?i=js,react,tailwind,html,css" />
 
 **Mobile**
-
-<img src="https://img.shields.io/badge/Flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white" />
-<img src="https://img.shields.io/badge/Dart-0175C2?style=for-the-badge&logo=dart&logoColor=white" />
+<br>
+<img src="https://skillicons.dev/icons?i=flutter,dart" />
 
 **Backend**
+<br>
+<img src="https://skillicons.dev/icons?i=py,fastapi,nodejs,java,php" />
 
-<img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" />
-<img src="https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white" />
-<img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=node.js&logoColor=white" />
-<img src="https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white" />
-<img src="https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white" />
-
-**Databases & Cloud**
-
-<img src="https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white" />
-<img src="https://img.shields.io/badge/Firebase-FFCA28?style=for-the-badge&logo=firebase&logoColor=black" />
+**Database & Cloud**
+<br>
+<img src="https://skillicons.dev/icons?i=postgres,firebase" />
 
 **Tools**
+<br>
+<img src="https://skillicons.dev/icons?i=git,github,vscode,postman" />
 
-<img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white" />
-<img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" />
-<img src="https://img.shields.io/badge/VS_Code-007ACC?style=for-the-badge&logo=visual-studio-code&logoColor=white" />
-<img src="https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white" />
+</div>
 
 <br>
 
@@ -73,10 +51,10 @@ const erlyn = {
 <div align="center">
 
 <a href="https://github.com/Devlynxz/codecrew-blog">
-  <img src="https://github-readme-stats.vercel.app/api/pin/?username=Devlynxz&repo=codecrew-blog&theme=tokyonight&hide_border=true" />
+  <img src="./profile/pin-codecrew-blog.svg" />
 </a>
 <a href="https://github.com/Devlynxz/matespaceprod-app">
-  <img src="https://github-readme-stats.vercel.app/api/pin/?username=Devlynxz&repo=matespaceprod-app&theme=tokyonight&hide_border=true" />
+  <img src="./profile/pin-matespaceprod-app.svg" />
 </a>
 
 </div>
@@ -90,12 +68,18 @@ const erlyn = {
 
 <div align="center">
 
-<img src="https://github-readme-stats.vercel.app/api?username=Devlynxz&show_icons=true&include_all_commits=true&count_private=true&theme=tokyonight&hide_border=true" height="165" />
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Devlynxz&layout=compact&theme=tokyonight&hide_border=true" height="165" />
+<img src="./profile/stats.svg" height="165" />
+<img src="./profile/top-langs.svg" height="165" />
 
 <img src="https://streak-stats.demolab.com?user=Devlynxz&theme=tokyonight&hide_border=true" width="48%" />
 
 <img src="https://github-readme-activity-graph.vercel.app/graph?username=Devlynxz&theme=tokyo-night&hide_border=true" width="98%" />
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Devlynxz/Devlynxz/output/github-contribution-grid-snake-dark.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Devlynxz/Devlynxz/output/github-contribution-grid-snake.svg" />
+  <img alt="Contribution snake animation" src="https://raw.githubusercontent.com/Devlynxz/Devlynxz/output/github-contribution-grid-snake.svg" width="100%" />
+</picture>
 
 </div>
 
@@ -117,10 +101,10 @@ const erlyn = {
   <img src="https://img.shields.io/badge/GitHub-Devlynxz-181717?style=for-the-badge&logo=github&logoColor=white" />
 </a>
 <a href="https://www.linkedin.com/in/erlyn-quimson/">
-  <img src="https://img.shields.io/badge/LinkedIn-Erlyn_Quimson-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" />
+  <img src="https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" />
 </a>
 <a href="mailto:erlynquimson93@gmail.com">
-  <img src="https://img.shields.io/badge/Email-erlynquimson93%40gmail.com-D14836?style=for-the-badge&logo=gmail&logoColor=white" />
+  <img src="https://img.shields.io/badge/Email-Contact_Me-D14836?style=for-the-badge&logo=gmail&logoColor=white" />
 </a>
 
 </div>
