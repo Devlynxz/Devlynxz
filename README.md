@@ -20,8 +20,7 @@
 
 A Developer who enjoys taking a product from idea to something people can actually use — building with React, FastAPI, PostgreSQL, and Flutter. I learn best by shipping real projects rather than tutorials.
 
-- 🔭 Currently building **[CodeCrew Blog](https://github.com/Devlynxz/codecrew-blog)** and **[MateSpaceprod App](https://github.com/Devlynxz/matespaceprod-app)**
-- 🤝 Collaborated with the **Codecrew Seekers** team on a full-stack blogging platform
+- 🔭 Currently building **[DevAtlas](https://github.com/Devlynxz/DevAtlas)** and **[MateSpaceprod App](https://github.com/Devlynxz/matespaceprod-app)**
 - 🎯 Goal: build software that solves real-world problems
 
 <br>
@@ -38,7 +37,7 @@ A Developer who enjoys taking a product from idea to something people can actual
 
 ## 🚀 Featured Projects
 
-**[CodeCrew Blog](https://github.com/Devlynxz/codecrew-blog)**
+**[DevAtlas Blog](https://github.com/Devlynxz/DevAtlas)**
 
 <img src="https://img.shields.io/github/languages/top/Devlynxz/codecrew-blog?style=flat-square&color=4B5563" /> <img src="https://img.shields.io/github/last-commit/Devlynxz/codecrew-blog?style=flat-square&color=4B5563" />
 
