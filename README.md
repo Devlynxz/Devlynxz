@@ -10,7 +10,7 @@
 
 <br>
 
-<img src="https://streak-stats.demolab.com?user=Devlynxz&hide_border=true&background=0D0D0D&stroke=4B5563&ring=FFFFFF&fire=FFFFFF&currStreakNum=FFFFFF&sideNums=D1D5DB&currStreakLabel=9CA3AF&sideLabels=9CA3AF&dates=6B7280" width="70%" alt="GitHub streak stats" />
+<!-- <img src="https://streak-stats.demolab.com?user=Devlynxz&hide_border=true&background=0D0D0D&stroke=4B5563&ring=FFFFFF&fire=FFFFFF&currStreakNum=FFFFFF&sideNums=D1D5DB&currStreakLabel=9CA3AF&sideLabels=9CA3AF&dates=6B7280" width="70%" alt="GitHub streak stats" /> -->
 
 </div>
 
