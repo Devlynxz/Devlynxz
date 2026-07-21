@@ -35,21 +35,9 @@ A Developer who enjoys taking a product from idea to something people can actual
 
 <br>
 
-## 🚀 Featured Projects
+<!-- <img src="https://img.shields.io/github/languages/top/Devlynxz/codecrew-blog?style=flat-square&color=4B5563" /> <img src="https://img.shields.io/github/last-commit/Devlynxz/codecrew-blog?style=flat-square&color=4B5563" /> -->
 
-**[DevAtlas Blog](https://github.com/Devlynxz/DevAtlas)**
-
-<img src="https://img.shields.io/github/languages/top/Devlynxz/codecrew-blog?style=flat-square&color=4B5563" /> <img src="https://img.shields.io/github/last-commit/Devlynxz/codecrew-blog?style=flat-square&color=4B5563" />
-
-Full-stack blogging platform with JWT authentication. React + Tailwind CSS frontend, FastAPI + PostgreSQL backend (SQLModel, bcrypt password hashing). Built with the Codecrew Seekers team.
-
-**[MateSpaceprod App](https://github.com/Devlynxz/matespaceprod-app)**
-
-<img src="https://img.shields.io/github/languages/top/Devlynxz/matespaceprod-app?style=flat-square&color=4B5563" /> <img src="https://img.shields.io/github/last-commit/Devlynxz/matespaceprod-app?style=flat-square&color=4B5563" />
-
-Personal productivity app built with Flutter, GetX, and Firebase. Task management with drag-to-prioritize, budget tracking with charts, notes, calendar, Google Sign-In, and push notifications.
-
-<br>
+<!-- <img src="https://img.shields.io/github/languages/top/Devlynxz/matespaceprod-app?style=flat-square&color=4B5563" /> <img src="https://img.shields.io/github/last-commit/Devlynxz/matespaceprod-app?style=flat-square&color=4B5563" /> -->
 
 ## 🐍 Contribution Activity
 
