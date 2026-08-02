@@ -16,12 +16,9 @@
 
 <br>
 
-## 👋 About Me
+## About Me
 
 A Developer who enjoys taking a product from idea to something people can actually use — building with React, FastAPI, PostgreSQL, and Flutter. I learn best by shipping real projects rather than tutorials.
-
-- 🔭 Currently building **[DevAtlas](https://github.com/Devlynxz/DevAtlas)** and **[MateSpaceprod App](https://github.com/Devlynxz/matespaceprod-app)**
-- 🎯 Goal: build software that solves real-world problems
 
 <br>
 
