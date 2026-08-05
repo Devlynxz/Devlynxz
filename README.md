@@ -1,11 +1,9 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:1A1A1A,100:4B5563&height=190&section=header&text=Developer&fontSize=36&fontColor=ffffff&animation=fadeIn&fontAlignY=35&desc=Building%20Real%20Products%2C%20End-to-End&descAlignY=55&descSize=16" width="100%"/>
-
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://readme-typing-svg.demolab.com?font=Fira+Code&size=20&pause=1000&color=E5E7EB&center=true&vCenter=true&width=600&lines=React+%2B+FastAPI+%2B+Flutter;Shipping+Full+Products%2C+Not+Just+Tutorials;Turning+Ideas+Into+Working+Code+%F0%9F%9A%80" />
-  <source media="(prefers-color-scheme: light)" srcset="https://readme-typing-svg.demolab.com?font=Fira+Code&size=20&pause=1000&color=1F2937&center=true&vCenter=true&width=600&lines=React+%2B+FastAPI+%2B+Flutter;Shipping+Full+Products%2C+Not+Just+Tutorials;Turning+Ideas+Into+Working+Code+%F0%9F%9A%80" />
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=20&pause=1000&color=1F2937&center=true&vCenter=true&width=600&lines=React+%2B+FastAPI+%2B+Flutter;Shipping+Full+Products%2C+Not+Just+Tutorials;Turning+Ideas+Into+Working+Code+%F0%9F%9A%80" alt="Typing SVG" />
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Devlynxz/Devlynxz/main/assets/hero-dark.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Devlynxz/Devlynxz/main/assets/hero-light.svg" />
+  <img alt="Erlyn Quimson — Full-Stack Developer" src="https://raw.githubusercontent.com/Devlynxz/Devlynxz/main/assets/hero-dark.svg" width="100%" />
 </picture>
 
 <br>
