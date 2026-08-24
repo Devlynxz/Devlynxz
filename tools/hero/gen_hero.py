@@ -78,6 +78,51 @@ except ImportError:
     DARK = None
 
 
+# --------------------------------------------------------------------------
+# Pixel cat
+# --------------------------------------------------------------------------
+# Sits to the right of the name. '#' fur, ':' shade, '^' inner ear + nose,
+# 'o' eye, '.' transparent. Rows 0-1 are the ears and are drawn separately so
+# they can twitch; the tail is not in the grid at all for the same reason.
+CAT = [
+    "...##........##.....",
+    "..#^##......##^#....",
+    "..##############....",
+    ".################...",
+    ".###oo######oo###...",
+    ".###oo######oo###...",
+    ".#######^^#######...",
+    ".######::::######...",
+    "..##############....",
+    "...############.....",
+    "...####::::####.....",
+    "...####::::####.....",
+    "...####::::####.....",
+    "..#####::::#####....",
+    "..#####::::#####....",
+    "..##############....",
+    "...############.....",
+    "...####::::####.....",
+]
+
+CAT_TAIL = [(16, 14), (17, 14), (18, 13), (19, 12), (19, 11), (18, 10), (17, 10)]
+CAT_EYES = ((4, 4), (12, 4))          # top-left of each 2x2 eye
+CAT_EAR_SPLIT = 9                     # column that divides left ear from right
+
+
+def cat_runs(row):
+    """Merge horizontal runs of one glyph so each becomes a single rect."""
+    runs = []
+    for i, ch in enumerate(row):
+        if ch == ".":
+            continue
+        if runs and runs[-1][0] == ch and runs[-1][2] == i:
+            runs[-1][2] = i + 1
+        else:
+            runs.append([ch, i, i + 1])
+    return runs
+
+
 def ascii_runs(row):
     """Split a row into (is_shadow, text) runs.
 
@@ -102,24 +147,26 @@ HANDLE = "Devlynxz"
 TERM_TITLE = "devlynxz@github  —  ~/profile"
 
 ROLES = [
-    "Full-Stack Developer",
-    "React + FastAPI Engineer",
+    "Developer",
+    "React + FastAPI Developer",
     "Flutter App Developer",
     "Product-Minded Builder",
     "Ships Real Projects",
 ]
 
+# Keep these rows about the craft, never the workplace — no employer, team,
+# client, project or location names. The banner is public on the profile.
 INFO = [
     ("FOCUS", "React · FastAPI · Flutter · PostgreSQL"),
-    ("BUILDING", "CodeCrew Blog  ·  MateSpaceprod App"),
-    ("TEAM", "Codecrew Seekers — full-stack blog platform"),
+    ("EXPLORING", "System design · Clean architecture · DX"),
+    ("CRAFT", "Idea → shipped, one commit at a time"),
     ("GITHUB", "github.com/Devlynxz"),
-    ("EMAIL", "erlynquimson93@gmail.com"),
+    ("EMAIL", "erlynquimson@gmail.com"),
 ]
 
 SKILLS = [
     "JavaScript", "React", "Tailwind", "Flutter", "Dart", "Python",
-    "FastAPI", "Node.js", "Java", "PHP", "PostgreSQL", "Firebase", "Git",
+    "FastAPI", "Node.js", "Angular", "PHP", "PostgreSQL", "Firebase", "Git",
 ]
 
 # --------------------------------------------------------------------------
@@ -131,9 +178,15 @@ CARD = (10, 10, 1160, 590, 26)
 LX, LY, LW, LH = 34, 34, 452, 542
 RX, RY, RW, RH = 502, 34, 644, 542
 
-CX = RX + 34            # right-panel content left edge  -> 480
+CX = RX + 34            # right-panel content left edge  -> 536
 CR = RX + RW - 34       # right-panel content right edge -> 1112
-CWD = CR - CX           # 632
+CWD = CR - CX           # 576
+
+# The cat sits in the gap between the end of the name (~x832 worst case at
+# 38px bold) and the panel's right edge, vertically between the header rule
+# (y82) and the rule under the roles (y258).
+CAT_PX = 8.0
+CAT_X, CAT_Y = 935.0, 92.0
 
 ASCII_X = 49
 ASCII_Y0 = 110
@@ -210,6 +263,85 @@ def pack_pills():
     if cur:
         rows.append((cur, curw))
     return rows, fs
+
+
+# --------------------------------------------------------------------------
+# Cat rendering
+# --------------------------------------------------------------------------
+def cat_group(T):
+    """The pixel cat beside the name.
+
+    Split into nested groups because each part moves on its own clock: the
+    whole cat rides a slow bob, the tail swings from its base, the ears twitch
+    about the point where they meet the skull, and the lids drop over the eyes.
+    Rotating a part inside the bob keeps the two transforms from fighting.
+    """
+    px = CAT_PX
+    ink = {"#": T["text"], ":": T["muted"], "^": T["dim"], "o": T["panel"]}
+    o = []
+    a = o.append
+
+    def rect(cx0, cy0, w, h, fill):
+        a('<rect x="%s" y="%s" width="%s" height="%s" fill="%s"/>'
+          % (f(CAT_X + cx0 * px), f(CAT_Y + cy0 * px), f(w * px), f(h * px), fill))
+
+    def spin(vals, cx0, cy0, dur, keytimes=None):
+        cx, cy = f(CAT_X + cx0 * px), f(CAT_Y + cy0 * px)
+        kt = ' keyTimes="%s"' % keytimes if keytimes else ""
+        return ('<animateTransform attributeName="transform" type="rotate" '
+                'values="%s"%s dur="%ss" repeatCount="indefinite"/>'
+                % (";".join("%s %s %s" % (f(v), cx, cy) for v in vals), kt, f(dur)))
+
+    # arrives just after the name lands
+    a('<g opacity="0"><animate attributeName="opacity" values="0;1" dur=".6s" '
+      'begin="1.05s" fill="freeze"/>')
+
+    # ground shadow — tightens as the cat lifts, so the bob reads as weight
+    a('<ellipse cx="%s" cy="%s" ry="%s" fill="%s" opacity=".16">'
+      '<animate attributeName="rx" values="%s;%s;%s" dur="3.2s" '
+      'repeatCount="indefinite" calcMode="spline" '
+      'keySplines=".4 0 .6 1;.4 0 .6 1"/></ellipse>'
+      % (f(CAT_X + 8.5 * px), f(CAT_Y + 18.7 * px), f(1.05 * px), T["dim"],
+         f(6.4 * px), f(5.3 * px), f(6.4 * px)))
+
+    a('<g filter="url(#asciiGlow)">')
+    a('<g><animateTransform attributeName="transform" type="translate" '
+      'values="0 0;0 -4;0 0" dur="3.2s" repeatCount="indefinite" '
+      'calcMode="spline" keySplines=".4 0 .6 1;.4 0 .6 1"/>')
+
+    # tail — drawn first so it sits behind the body
+    a('<g>' + spin((-9, 10, -9), 16, 14.5, 1.9))
+    for (cx0, cy0) in CAT_TAIL:
+        rect(cx0, cy0, 1, 1, T["text"])
+    a('</g>')
+
+    # ears, each on its own clock so the twitches never sync up
+    for c0, c1, ox, dur in ((0, CAT_EAR_SPLIT, 3.5, 5.0),
+                            (CAT_EAR_SPLIT, len(CAT[0]), 14.0, 6.3)):
+        a('<g>' + spin((0, 0, -8, 6, 0, 0), ox, 2, dur,
+                       keytimes="0;.72;.78;.84;.9;1"))
+        for j in (0, 1):
+            for ch, i0, i1 in cat_runs(CAT[j][c0:c1]):
+                rect(c0 + i0, j, i1 - i0, 1, ink[ch])
+        a('</g>')
+
+    # head + body (ear rows already drawn above)
+    for j, row in enumerate(CAT):
+        if j < 2:
+            continue
+        for ch, i0, i1 in cat_runs(row):
+            rect(i0, j, i1 - i0, 1, ink[ch])
+
+    # blink — fur-coloured lids dropped over the eyes for a few frames
+    for (ex, ey) in CAT_EYES:
+        a('<g opacity="0"><animate attributeName="opacity" values="0;1;0" '
+          'keyTimes="0;.94;.97" calcMode="discrete" dur="4.4s" '
+          'repeatCount="indefinite"/>')
+        rect(ex, ey, 2, 2, T["text"])
+        a('</g>')
+
+    a('</g></g></g>')
+    return "".join(o)
 
 
 # --------------------------------------------------------------------------
@@ -466,6 +598,9 @@ def build(theme_name):
       % (CX, SANS, esc(NAME)))
     a('</g>')
 
+    # pixel cat, in the gap to the right of the name
+    a(cat_group(T))
+
     # typing roles
     a('<g opacity="0"><animate attributeName="opacity" values="0;1" dur=".6s" begin="1.4s" '
       'fill="freeze"/>')
@@ -553,7 +688,7 @@ def build(theme_name):
           "v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3z")
     socials = [
         (gh, "github.com/Devlynxz", "https://github.com/Devlynxz"),
-        (None, "erlynquimson93@gmail.com", "mailto:erlynquimson93@gmail.com"),
+        (None, "erlynquimson@gmail.com", "mailto:erlynquimson@gmail.com"),
     ]
     sx = CX
     a('<g opacity="0"><animate attributeName="opacity" values="0;1" dur=".6s" begin="3.3s" '
